@@ -1,6 +1,6 @@
 # msc-any-fullscreen-popup
 
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/msc-any-fullscreen-popup) [[![DeepScan grade](https://deepscan.io/api/teams/16372/projects/25667/branches/806186/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16372&pid=25667&bid=806186)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/msc-any-fullscreen-popup) [![DeepScan grade](https://deepscan.io/api/teams/16372/projects/25667/branches/806186/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16372&pid=25667&bid=806186)
 
 Imagine the feature to open a popup window in fullscreen mode. With [window-management](https://developer.chrome.com/articles/window-management/#the-window-management-permission) support, user could directly open a popup window in fullscreen mode in just one click. Once the user has granted the permission, Developers could use [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) method to do this fullscreen popup action.（For more detail check this page -「[New origin trial for fullscreen popup windows](https://developer.chrome.com/blog/fullscreen-popups-origin-trial/)」）
 
