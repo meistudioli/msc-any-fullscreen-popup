@@ -6,7 +6,7 @@ Imagine the feature to open a popup window in fullscreen mode. With [window-mana
 
 &lt;msc-any-fullscreen-popup /> is a web component which wrap this feature. Developers could apply it to any element they like. 
 
-![<msc-any-fullscreen-popup />](https://blog.lalacube.com/mei/img/preview/msc-any-fullscreen-popup.png)
+<img alt="msc-any-fullscreen-popup" src="https://github.com/meistudioli/msc-any-fullscreen-popup/assets/10822546/6c8b8683-b8e8-443b-9a58-88785a3b0fb7">
 
 ## Basic Usage
 
