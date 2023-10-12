@@ -17,7 +17,7 @@ const objectAttrs = [];
 const custumEvents = {
   click: 'msc-any-fullscreen-popup-click'
 };
-let snackbar, popupWin;
+let popupWin;
 
 const template = document.createElement('template');
 template.innerHTML = `
