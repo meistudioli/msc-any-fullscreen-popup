@@ -1,0 +1,27 @@
+{
+  "name": "msc-any-fullscreen-popup",
+  "version": "1.0.0",
+  "description": "Imagine the feature to open a popup window in fullscreen mode. With window-management support, user could directly open a popup window in fullscreen mode in just one click.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meistudioli/msc-any-fullscreen-popup.git"
+  },
+  "keywords": [
+    "web",
+    "front-end",
+    "web component",
+    "fullscreen",
+    "popup",
+    "window-management"
+  ],
+  "author": "Paul Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meistudioli/msc-any-fullscreen-popup/issues"
+  },
+  "homepage": "https://github.com/meistudioli/msc-any-fullscreen-popup#readme"
+}
