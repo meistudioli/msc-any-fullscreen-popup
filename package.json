@@ -1,6 +1,6 @@
 {
   "name": "msc-any-fullscreen-popup",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Imagine the feature to open a popup window in fullscreen mode. With window-management support, user could directly open a popup window in fullscreen mode in just one click.",
   "main": "index.html",
   "scripts": {

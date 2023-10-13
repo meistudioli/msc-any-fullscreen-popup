@@ -393,12 +393,12 @@ customElements.whenDefined('msc-any-fullscreen-popup').then(() => {
   const anyFullscreenPopup = document.querySelector('msc-any-fullscreen-popup');
 
   const events = [
-    'msc-any-fullscreen-popup-click'
+    'msc-any-fullscreen-popup-click',
+    'msc-any-fullscreen-popup-error'
   ];
 
   const handler = (evt) => {
-    const { type, target } = evt;
-    const child = target.dataset.child;
+    const { type, detail = null } = evt;
 
     switch (type) {
       case 'msc-any-fullscreen-popup-click': {
@@ -407,6 +407,17 @@ customElements.whenDefined('msc-any-fullscreen-popup').then(() => {
           'font-size:12px;line-height:1.3;background:#3a99d8;color:#fff;border-radius:3px;padding:0 4px;',
           'font-size:12px;line-height:1.3;',
           'font-size:12px;line-height:1.3;color:#a4f6b7;',
+          'font-size:12px;line-height:1.3;'
+        );
+        break;
+      }
+
+      case 'msc-any-fullscreen-popup-error': {
+        const { message } = detail;
+
+        console.log(
+          `%c${type}%c > ${message}`,
+          'font-size:12px;line-height:1.3;background:#3a99d8;color:#fff;border-radius:3px;padding:0 4px;',
           'font-size:12px;line-height:1.3;'
         );
         break;
@@ -436,49 +447,6 @@ customElements.whenDefined('msc-any-fullscreen-popup').then(() => {
       }
 
       anyFullscreenPopup.url = dataObject['url'];
-    }
-  );
-});
-</script>
-
-<script type="module">
-customElements.whenDefined('msc-any-pip').then(() => {
-  const wrap = document.querySelector('.wrap');
-
-  const events = [
-    'msc-any-pip-piping',
-    'msc-any-pip-pip-end'
-  ];
-
-  const handler = (evt) => {
-    const { type, target } = evt;
-    const child = target.dataset.child;
-
-    switch (type) {
-      case 'msc-any-pip-piping': {
-        console.log(
-          `%c${type}%c`,
-          'font-size:12px;line-height:1.3;background:#3a99d8;color:#fff;border-radius:3px;padding:0 4px;',
-          'font-size:12px;line-height:1.3;'
-        );
-        break;
-      }
-
-      case 'msc-any-pip-pip-end': {
-        console.log(
-          `%c${type}%c`,
-          'font-size:12px;line-height:1.3;background:#3a99d8;color:#fff;border-radius:3px;padding:0 4px;',
-          'font-size:12px;line-height:1.3;'
-        );
-        break;
-      }
-    };
-  };
-
-  // events
-  events.map(
-    (event) => {
-      wrap.addEventListener(event, handler);
     }
   );
 });

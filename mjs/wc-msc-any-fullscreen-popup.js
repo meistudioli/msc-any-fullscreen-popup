@@ -15,7 +15,8 @@ const defaults = {
 const booleanAttrs = []; // booleanAttrs default should be false
 const objectAttrs = [];
 const custumEvents = {
-  click: 'msc-any-fullscreen-popup-click'
+  click: 'msc-any-fullscreen-popup-click',
+  error: 'msc-any-fullscreen-popup-error'
 };
 let popupWin;
 
@@ -280,17 +281,27 @@ export class MscAnyFullscreenPopup extends HTMLElement {
   }
 
   async _onClick() {
+    const deniedError = 'Insufficient permissions or user activation.';
+    
     try {
       const { state } = await window.navigator.permissions.query({ name:'window-management' });
       
       if (state === 'denied') {
-        throw new Error('Please allow the Window Management permission for <msc-any-fullscreen-popup /> functionality.');
+        throw new Error(deniedError);
       } else if (state !== 'granted') {
         await window.getScreenDetails();
       }
     } catch(err) {
       // other browser might not support Window Management permission
-      console.warn(`${_wcl.classToTagName(this.constructor.name)}: ${err.message}`);
+      let { message } = err;
+
+      if (message !== deniedError) {
+        message = 'Window management not supported.';
+      }
+
+      console.warn(`${_wcl.classToTagName(this.constructor.name)}: ${message}`);
+
+      this.#fireEvent(custumEvents.error, { message });
     }
 
     this.#fireEvent(custumEvents.click);

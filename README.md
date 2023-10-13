@@ -147,10 +147,12 @@ Set url addess for popup window. Default is is empty string.
 | Event Signature | Description |
 | ----------- | ----------- |
 | msc-any-fullscreen-popup-click | Fired when &lt;msc-any-fullscreen-popup /> clicked. |
+| msc-any-fullscreen-popup-error | Fired when error occured. Developers could get message througn `event.detatil`. |
 
 ## Reference
 
 - [New origin trial for fullscreen popup windows](https://developer.chrome.com/blog/fullscreen-popups-origin-trial/)
 - [Managing several displays with the Window Management API](https://developer.chrome.com/articles/window-management/)
 - [MDN > window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open)
+- [&lt;msc-any-fullscreen-popup /> demo](https://blog.lalacube.com/mei/webComponent_msc-any-fullscreen-popup.html)
 - [YouTube > tutorial](https://youtu.be/Z_uee448gDQ)
